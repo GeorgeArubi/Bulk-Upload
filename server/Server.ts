@@ -7,6 +7,7 @@ import * as path from "path";
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const fs = require('fs')
+const cors = require('cors')
 
 const DATA_DIR = path.join(__dirname, 'tmp')
 
@@ -19,14 +20,14 @@ export class Server {
 
         this.app.use(express.static(path.resolve("./") + "/build/client"));
 
-        this.app.get("/api", (req: Request, res: Response): void => {
-            res.send("You have reached the API!");
-        });
-
         this.app.get("*", (req: Request, res: Response): void => {
             res.sendFile(path.resolve("./") + "/build/client/index.html");
         });
 
+        this.app.use(cors({
+            origin: true,
+            credentials: true,
+          }))
         this.app.use(bodyParser.json())
         this.app.use(cookieParser)
         this.app.use(session({
@@ -39,7 +40,7 @@ export class Server {
             res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*')
             next()
         })
-
+          
         // Routes
         this.app.get('/', (req, res) => {
             res.setHeader('Content-Type', 'text/plain')
@@ -50,26 +51,26 @@ export class Server {
         const uppyOptions = {
             providerOptions: {
                 s3: {
-                getKey: (req, filename, metadata) => `whatever/${Math.random().toString(32).slice(2)}/${filename}`,
+                getKey: (req, filename) => filename,
                 key: process.env.COMPANION_AWS_KEY,
                 secret: process.env.COMPANION_AWS_SECRET,
                 bucket: process.env.COMPANION_AWS_BUCKET,
                 region: process.env.COMPANION_AWS_REGION,
-                endpoint: process.env.COMPANION_AWS_ENDPOINT,
                 },
                 // you can also add options for additional providers here
             },
             server: {
                 host: 'localhost:8080',
-                protocol: 'http',
+                protocol: 'http', // 'http' || 'https'
+                path: '/companion'
             },
             filePath: DATA_DIR,
             secret: 'some-secret',
+            uploadUrls: ['http://localhost:8080'],
             debug: true,
         }
 
-
-        // Create the data directory here
+        // Create the data directory here for test purposes only
         try {
             fs.accessSync(DATA_DIR)
         } catch (err) {
@@ -79,7 +80,7 @@ export class Server {
             fs.rmSync(DATA_DIR, { recursive: true, force: true })
         })
 
-        this.app.use(companion.app(uppyOptions))
+        this.app.use('/companion', companion.app(uppyOptions))
 
         // handle 404
         this.app.use((req, res) => {
@@ -97,7 +98,7 @@ export class Server {
     public start(port: number): void {
         companion.socket(this.app.listen(port, (err?: any) => {
             if (err) throw err;
-            console.log(`> Ready on localhost:${port} - env ${process.env.NODE_ENV}`);
+            console.log(`> Ready on localhost:${port}`);
             console.log('> Welcome to Companion!')
           }));
     }
