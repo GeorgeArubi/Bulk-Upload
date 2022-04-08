@@ -18,16 +18,23 @@ export class Server {
     constructor(app: Express) {
         this.app = app;
 
-        this.app.use(express.static(path.resolve("./") + "/build/client"));
-
-        this.app.get("*", (req: Request, res: Response): void => {
-            res.sendFile(path.resolve("./") + "/build/client/index.html");
-        });
-
         this.app.use(cors({
-            origin: true,
+            origin: ['http://localhost:3000'],
             credentials: true,
+            methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'PATCH'],
           }))
+
+        this.app.use((req, res, next) => {
+            res.setHeader('Access-Control-Allow-Origin', req.headers.origin || 'http://localhost:3000')
+            next()
+        })
+
+        // Routes
+        this.app.get('/', (req, res) => {
+            res.setHeader('Content-Type', 'text/plain')
+            res.send('Welcome to Companion')
+        })
+
         this.app.use(bodyParser.json())
         this.app.use(cookieParser)
         this.app.use(session({
@@ -35,23 +42,12 @@ export class Server {
             resave: true,
             saveUninitialized: true,
         }))
-
-        this.app.use((req, res, next) => {
-            res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*')
-            next()
-        })
           
-        // Routes
-        this.app.get('/', (req, res) => {
-            res.setHeader('Content-Type', 'text/plain')
-            res.send('Welcome to Companion')
-        })
-
-        // initialize uppy
+        // Initialize uppy
         const uppyOptions = {
             providerOptions: {
                 s3: {
-                getKey: (req, filename) => filename,
+                getKey: (req, filename, metadata) => `${req.user.id}/${filename}`,
                 key: process.env.COMPANION_AWS_KEY,
                 secret: process.env.COMPANION_AWS_SECRET,
                 bucket: process.env.COMPANION_AWS_BUCKET,
@@ -62,12 +58,15 @@ export class Server {
             server: {
                 host: 'localhost:8080',
                 protocol: 'http', // 'http' || 'https'
-                path: '/companion'
+                path: '/companion',
             },
             filePath: DATA_DIR,
             secret: 'some-secret',
-            uploadUrls: ['http://localhost:8080'],
+            uploadUrls: 'http://localhost:3000',
             debug: true,
+            allowLocalUrls: true, // Only enable this in development
+            acl: 'private',
+            maxFileSize: 1000000000,
         }
 
         // Create the data directory here for test purposes only
@@ -92,8 +91,7 @@ export class Server {
             console.error('\x1b[31m', err.stack, '\x1b[0m')
             res.status(err.status || 500).json({ message: err.message, error: err })
         })
-
-    }
+}
 
     public start(port: number): void {
         companion.socket(this.app.listen(port, (err?: any) => {
