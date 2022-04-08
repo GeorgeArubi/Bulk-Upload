@@ -11,6 +11,7 @@
     "@uppy/aws-s3": "^2.0.8",
     "@uppy/core": "^2.1.7",
     "@uppy/react": "^2.1.2",
+    "cors": "^2.8.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-scripts": "5.0.0",
