@@ -1,5 +1,4 @@
-import {Express, Request, Response} from "express";
-import express from "express";
+import { Express } from "express";
 import bodyParser from 'body-parser'
 import companion from '@uppy/companion'
 import * as path from "path";
