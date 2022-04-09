@@ -1,7 +1,7 @@
 # Uppy AWS-Companion with Typescript, Express, React, and TailwindCSS
 
 This application uses @uppy/companion with a custom AWS S3 configuration.
-Files are uploaded to a randomly named directory inside the `whatever/` directory in a bucket.
+Files are uploaded to a randomly named directory inside the `uppy/` directory in a bucket.
 
 ## Run it
 
