@@ -19,6 +19,7 @@ Run these commands from the `client` folder.
 - `npm run build` Builds the frontend app to the `build/client` directory.
 
 
+
 Then, set up the `COMPANION_AWS_KEY`, `COMPANION_AWS_SECRET`, `COMPANION_AWS_REGION`, and `COMPANION_AWS_BUCKET` environment variables for @uppy/companion.
 
 Then, again in the **repository root**, start this application by doing:
