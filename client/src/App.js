@@ -17,7 +17,7 @@ const App = () => {
     }  
   })
   uppy.use(AwsS3, { 
-    limit: 2, // Limit the amount of uploads going on at the same time. 
+    limit: 10, // Limit the amount of uploads going on at the same time. 
     timeout: ms('1 minute'), // Abort upload after 1 minute if no upload progress.
     companionUrl: 'http://localhost:8080',
     metaFields: ['name', 'bulk-upload'] //  Root URL of the uppy-companion instance
