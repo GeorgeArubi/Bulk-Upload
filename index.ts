@@ -7,9 +7,15 @@ const session = require('express-session')
 const fs = require('fs')
 const cors = require('cors')
 
-const app = express();
 const port = 8080
-const DATA_DIR = path.join(__dirname, 'tmp')
+const DATA_DIR = path.join(__dirname, 'uploads')
+
+// Companion requires body-parser and express-session middleware.
+// You can add it like this if you use those throughout your app.
+//
+// If you are using something else in your app, you can add these
+// middlewares in the same subpath as Companion instead.
+const app = express();
 
 const corsOptions = {
   origin: '*',
@@ -27,12 +33,23 @@ app.use(session({
     resave: true,
     saveUninitialized: true,
 }))
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*')
+  next()
+})
+
+// Routes
+app.get('/', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain')
+  res.send('Welcome to Companion')
+})
           
 // Initialize uppy
 const uppyOptions = {
   providerOptions: {
     s3: {
-      getKey: (req, filename, metadata) => `uppy/${Math.random().toString(32).slice(2)}/${filename}`,
+      getKey: (req, filename, metadata) => `${req.user.id}/${filename}`,
       key: process.env.COMPANION_AWS_KEY,
       secret: process.env.COMPANION_AWS_SECRET,
       bucket: process.env.COMPANION_AWS_BUCKET,
@@ -43,6 +60,7 @@ const uppyOptions = {
   server: {
     host: 'localhost:8080',
     protocol: 'http', // 'http' || 'https'
+    path: '/companion',
   },
   filePath: DATA_DIR,
   secret: 'some-secret',
@@ -50,6 +68,7 @@ const uppyOptions = {
   debug: true,
   allowLocalUrls: true, // Only enable in development
   maxFileSize: 1000000000,
+  corsOrigins: true,
 }
 
 // Create the data directory here for test purposes only
@@ -70,9 +89,26 @@ try {
   })
   companion.socket(server);
   app.options('*', cors(corsOptions));
-  app.use(companion.app(uppyOptions));
+  app.use('/companion', companion.app(uppyOptions));
 } catch (error) {
 console.log(error);
 }
 
 // add companion emitter to keep track of the state of the upload
+const companionApp = companion.app(uppyOptions)
+const { companionEmitter: emitter }: any = companionApp
+
+emitter.on('upload-start', ({ token }) => {
+  console.log('Upload started', token)
+
+  function onUploadEvent ({ action, payload }) {
+    if (action === 'success') {
+      emitter.off(token, onUploadEvent) // avoid listener leak
+      console.log('Upload finished', token, payload.url)
+    } else if (action === 'error') {
+      emitter.off(token, onUploadEvent) // avoid listener leak
+      console.error('Upload failed', payload)
+    }
+  }
+  emitter.on(token, onUploadEvent)
+})
