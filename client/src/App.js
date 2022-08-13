@@ -34,8 +34,7 @@ const App = () => {
             <div className="font-bold text-xl mb-2">Uppy Bulk Upload</div>
             <p className="text-grey-darker text-base">
               Frontend: React, Uppy and Tailwind CSS. This interface should allow for drag/drop 
-              and file input methods. I think we can target a div id to build custom components.
-              See: 
+              and file input methods. I think we can target a div id to build custom components. 
             </p>
           </div>
           
