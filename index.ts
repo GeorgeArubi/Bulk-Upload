@@ -14,7 +14,7 @@ const DATA_DIR = path.join(__dirname, 'uploads')
 // You can add it like this if you use those throughout your app.
 //
 // If you are using something else in your app, you can add these
-// middlewares in the same subpath as Companion instead.
+// middleware in the same subpath as Companion instead.
 const app = express();
 
 const corsOptions = {
@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 const uppyOptions = {
   providerOptions: {
     s3: {
-      getKey: (req, filename, metadata) => `${req.user.id}/${filename}`,
+      getKey: (req, filename, _metadata) => `${req.user.id}/${filename}`,
       key: process.env.COMPANION_AWS_KEY,
       secret: process.env.COMPANION_AWS_SECRET,
       bucket: process.env.COMPANION_AWS_BUCKET,
