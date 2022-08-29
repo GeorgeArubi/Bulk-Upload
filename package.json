@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/express": "^4.17.13",
-    "@uppy/aws-s3": "^2.0.9",
+    "@uppy/aws-s3": "^3.0.0",
     "@uppy/companion": "^3.5.0",
     "@uppy/react": "^2.1.2",
     "body-parser": "^1.20.0",
