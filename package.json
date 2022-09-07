@@ -18,7 +18,7 @@
     "express-session": "^1.17.2",
     "moment": "^2.29.4",
     "react-scripts": "^5.0.1",
-    "typescript": "^4.6.3"
+    "typescript": "^4.8.2"
   },
   "scripts": {
     "client": "cd ./client && npm run start",
