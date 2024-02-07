@@ -1555,10 +1555,6 @@
   version "1.1.2"
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-1.1.2.tgz"
 
-"@transloadit/prettier-bytes@0.0.7":
-  version "0.0.7"
-  resolved "https://registry.npmjs.org/@transloadit/prettier-bytes/-/prettier-bytes-0.0.7.tgz"
-
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
@@ -1949,97 +1945,16 @@
     validator "^13.0.0"
     ws "8.8.1"
 
-"@uppy/dashboard@^2.1.2":
-  version "2.1.4"
-  resolved "https://registry.npmjs.org/@uppy/dashboard/-/dashboard-2.1.4.tgz"
+"@uppy/react@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@uppy/react/-/react-3.1.0.tgz#1dc8fa5e2b21b548c8e242c072956994a34439f6"
   dependencies:
-    "@transloadit/prettier-bytes" "0.0.7"
-    "@uppy/informer" "^2.0.5"
-    "@uppy/provider-views" "^2.0.7"
-    "@uppy/status-bar" "^2.1.2"
-    "@uppy/thumbnail-generator" "^2.1.0"
-    "@uppy/utils" "^4.0.5"
-    classnames "^2.2.6"
-    is-shallow-equal "^1.0.1"
-    lodash.debounce "^4.0.8"
-    memoize-one "^5.0.4"
-    nanoid "^3.1.25"
-    preact "^10.5.13"
-
-"@uppy/drag-drop@^2.0.5":
-  version "2.0.6"
-  resolved "https://registry.npmjs.org/@uppy/drag-drop/-/drag-drop-2.0.6.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.5"
-    preact "^10.5.13"
-
-"@uppy/file-input@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/@uppy/file-input/-/file-input-2.0.5.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.4"
-    preact "^10.5.13"
-
-"@uppy/informer@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/@uppy/informer/-/informer-2.0.5.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.4"
-    preact "^10.5.13"
-
-"@uppy/progress-bar@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/@uppy/progress-bar/-/progress-bar-2.0.4.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.3"
-    preact "^10.5.13"
-
-"@uppy/provider-views@^2.0.7":
-  version "2.0.8"
-  resolved "https://registry.npmjs.org/@uppy/provider-views/-/provider-views-2.0.8.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.5"
-    classnames "^2.2.6"
-    preact "^10.5.13"
-
-"@uppy/react@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/@uppy/react/-/react-2.1.2.tgz"
-  dependencies:
-    "@uppy/dashboard" "^2.1.2"
-    "@uppy/drag-drop" "^2.0.5"
-    "@uppy/file-input" "^2.0.5"
-    "@uppy/progress-bar" "^2.0.4"
-    "@uppy/status-bar" "^2.1.2"
-    "@uppy/utils" "^4.0.4"
+    "@uppy/utils" "^5.1.2"
     prop-types "^15.6.1"
 
-"@uppy/status-bar@^2.1.2":
-  version "2.1.3"
-  resolved "https://registry.npmjs.org/@uppy/status-bar/-/status-bar-2.1.3.tgz"
-  dependencies:
-    "@transloadit/prettier-bytes" "0.0.7"
-    "@uppy/utils" "^4.0.5"
-    classnames "^2.2.6"
-    lodash.throttle "^4.1.1"
-    preact "^10.5.13"
-
-"@uppy/thumbnail-generator@^2.1.0":
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/@uppy/thumbnail-generator/-/thumbnail-generator-2.1.1.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.5"
-    exifr "^7.0.0"
-
-"@uppy/utils@^4.0.3", "@uppy/utils@^4.0.4", "@uppy/utils@^4.0.5":
-  version "4.0.6"
-  resolved "https://registry.npmjs.org/@uppy/utils/-/utils-4.0.6.tgz"
-  dependencies:
-    lodash.throttle "^4.1.1"
-
-"@uppy/utils@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.0.2.tgz#9ebbcc1044544a84675b7c254e3c743f82276284"
+"@uppy/utils@^5.0.2", "@uppy/utils@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.1.2.tgz#136e4a2d3fc7222c6d19e0111fdd56bb2449be60"
   dependencies:
     lodash.throttle "^4.1.1"
 
@@ -2853,10 +2768,6 @@ ci-info@^3.2.0:
 cjs-module-lexer@^1.0.0:
   version "1.2.2"
   resolved "https://registry.npmjs.org/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz"
-
-classnames@^2.2.6:
-  version "2.3.1"
-  resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
 
 clean-css@^5.2.2:
   version "5.3.1"
@@ -3962,10 +3873,6 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-exifr@^7.0.0:
-  version "7.1.3"
-  resolved "https://registry.npmjs.org/exifr/-/exifr-7.1.3.tgz"
-
 exit@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz"
@@ -4859,10 +4766,6 @@ is-regexp@^1.0.0:
 is-root@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/is-root/-/is-root-2.1.0.tgz"
-
-is-shallow-equal@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/is-shallow-equal/-/is-shallow-equal-1.0.1.tgz"
 
 is-shared-array-buffer@^1.0.2:
   version "1.0.2"
@@ -5823,10 +5726,6 @@ memfs@^3.1.2, memfs@^3.4.3:
   dependencies:
     fs-monkey "^1.0.3"
 
-memoize-one@^5.0.4:
-  version "5.2.1"
-  resolved "https://registry.npmjs.org/memoize-one/-/memoize-one-5.2.1.tgz"
-
 merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.1.tgz"
@@ -5951,7 +5850,7 @@ namespace-emitter@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/namespace-emitter/-/namespace-emitter-2.0.1.tgz"
 
-nanoid@^3.1.25, nanoid@^3.3.4:
+nanoid@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
 
@@ -6812,10 +6711,6 @@ postcss@^8.3.5, postcss@^8.4.19, postcss@^8.4.4, postcss@^8.4.6, postcss@^8.4.7:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
-
-preact@^10.5.13:
-  version "10.7.1"
-  resolved "https://registry.npmjs.org/preact/-/preact-10.7.1.tgz"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
