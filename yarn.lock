@@ -1555,10 +1555,6 @@
   version "1.1.2"
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-1.1.2.tgz"
 
-"@transloadit/prettier-bytes@0.0.7":
-  version "0.0.7"
-  resolved "https://registry.npmjs.org/@transloadit/prettier-bytes/-/prettier-bytes-0.0.7.tgz"
-
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
@@ -1725,8 +1721,8 @@
   resolved "https://registry.npmjs.org/@types/mime/-/mime-1.3.2.tgz"
 
 "@types/node@*":
-  version "17.0.23"
-  resolved "https://registry.npmjs.org/@types/node/-/node-17.0.23.tgz"
+  version "18.11.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1949,97 +1945,16 @@
     validator "^13.0.0"
     ws "8.8.1"
 
-"@uppy/dashboard@^2.1.2":
-  version "2.1.4"
-  resolved "https://registry.npmjs.org/@uppy/dashboard/-/dashboard-2.1.4.tgz"
+"@uppy/react@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@uppy/react/-/react-3.1.0.tgz#1dc8fa5e2b21b548c8e242c072956994a34439f6"
   dependencies:
-    "@transloadit/prettier-bytes" "0.0.7"
-    "@uppy/informer" "^2.0.5"
-    "@uppy/provider-views" "^2.0.7"
-    "@uppy/status-bar" "^2.1.2"
-    "@uppy/thumbnail-generator" "^2.1.0"
-    "@uppy/utils" "^4.0.5"
-    classnames "^2.2.6"
-    is-shallow-equal "^1.0.1"
-    lodash.debounce "^4.0.8"
-    memoize-one "^5.0.4"
-    nanoid "^3.1.25"
-    preact "^10.5.13"
-
-"@uppy/drag-drop@^2.0.5":
-  version "2.0.6"
-  resolved "https://registry.npmjs.org/@uppy/drag-drop/-/drag-drop-2.0.6.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.5"
-    preact "^10.5.13"
-
-"@uppy/file-input@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/@uppy/file-input/-/file-input-2.0.5.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.4"
-    preact "^10.5.13"
-
-"@uppy/informer@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/@uppy/informer/-/informer-2.0.5.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.4"
-    preact "^10.5.13"
-
-"@uppy/progress-bar@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/@uppy/progress-bar/-/progress-bar-2.0.4.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.3"
-    preact "^10.5.13"
-
-"@uppy/provider-views@^2.0.7":
-  version "2.0.8"
-  resolved "https://registry.npmjs.org/@uppy/provider-views/-/provider-views-2.0.8.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.5"
-    classnames "^2.2.6"
-    preact "^10.5.13"
-
-"@uppy/react@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/@uppy/react/-/react-2.1.2.tgz"
-  dependencies:
-    "@uppy/dashboard" "^2.1.2"
-    "@uppy/drag-drop" "^2.0.5"
-    "@uppy/file-input" "^2.0.5"
-    "@uppy/progress-bar" "^2.0.4"
-    "@uppy/status-bar" "^2.1.2"
-    "@uppy/utils" "^4.0.4"
+    "@uppy/utils" "^5.1.2"
     prop-types "^15.6.1"
 
-"@uppy/status-bar@^2.1.2":
-  version "2.1.3"
-  resolved "https://registry.npmjs.org/@uppy/status-bar/-/status-bar-2.1.3.tgz"
-  dependencies:
-    "@transloadit/prettier-bytes" "0.0.7"
-    "@uppy/utils" "^4.0.5"
-    classnames "^2.2.6"
-    lodash.throttle "^4.1.1"
-    preact "^10.5.13"
-
-"@uppy/thumbnail-generator@^2.1.0":
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/@uppy/thumbnail-generator/-/thumbnail-generator-2.1.1.tgz"
-  dependencies:
-    "@uppy/utils" "^4.0.5"
-    exifr "^7.0.0"
-
-"@uppy/utils@^4.0.3", "@uppy/utils@^4.0.4", "@uppy/utils@^4.0.5":
-  version "4.0.6"
-  resolved "https://registry.npmjs.org/@uppy/utils/-/utils-4.0.6.tgz"
-  dependencies:
-    lodash.throttle "^4.1.1"
-
-"@uppy/utils@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.0.2.tgz#9ebbcc1044544a84675b7c254e3c743f82276284"
+"@uppy/utils@^5.0.2", "@uppy/utils@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.1.2.tgz#136e4a2d3fc7222c6d19e0111fdd56bb2449be60"
   dependencies:
     lodash.throttle "^4.1.1"
 
@@ -2599,7 +2514,7 @@ bfj@^7.0.2:
 
 big.js@^5.2.2:
   version "5.2.2"
-  resolved "https://registry.npmjs.org/big.js/-/big.js-5.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -2854,10 +2769,6 @@ cjs-module-lexer@^1.0.0:
   version "1.2.2"
   resolved "https://registry.npmjs.org/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz"
 
-classnames@^2.2.6:
-  version "2.3.1"
-  resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
-
 clean-css@^5.2.2:
   version "5.3.1"
   resolved "https://registry.npmjs.org/clean-css/-/clean-css-5.3.1.tgz"
@@ -2877,8 +2788,8 @@ cliui@^7.0.2:
     wrap-ansi "^7.0.0"
 
 clone-response@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/clone-response/-/clone-response-1.0.2.tgz"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/clone-response/-/clone-response-1.0.3.tgz#af2032aa47816399cf5f0a1d0db902f517abb8c3"
   dependencies:
     mimic-response "^1.0.0"
 
@@ -3576,7 +3487,7 @@ emoji-regex@^9.2.2:
 
 emojis-list@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.npmjs.org/emojis-list/-/emojis-list-3.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -3584,7 +3495,7 @@ encodeurl@~1.0.2:
 
 end-of-stream@^1.1.0:
   version "1.4.4"
-  resolved "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.4.tgz"
+  resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.4.tgz#5ae64a5f45057baf3626ec14da0ca5e4b2431eb0"
   dependencies:
     once "^1.4.0"
 
@@ -3962,10 +3873,6 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-exifr@^7.0.0:
-  version "7.1.3"
-  resolved "https://registry.npmjs.org/exifr/-/exifr-7.1.3.tgz"
-
 exit@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz"
@@ -4295,7 +4202,7 @@ get-stream@^4.1.0:
 
 get-stream@^5.1.0:
   version "5.2.0"
-  resolved "https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-5.2.0.tgz#4966a1795ee5ace65e706c4b7beb71257d6e22d3"
   dependencies:
     pump "^3.0.0"
 
@@ -4859,10 +4766,6 @@ is-regexp@^1.0.0:
 is-root@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/is-root/-/is-root-2.1.0.tgz"
-
-is-shallow-equal@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/is-shallow-equal/-/is-shallow-equal-1.0.1.tgz"
 
 is-shared-array-buffer@^1.0.2:
   version "1.0.2"
@@ -5500,8 +5403,8 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.npmjs.org/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz"
 
 json5@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/json5/-/json5-1.0.1.tgz"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.2.tgz#63d98d60f21b313b77c4d6da18bfa69d80e1d593"
   dependencies:
     minimist "^1.2.0"
 
@@ -5629,8 +5532,8 @@ loader-runner@^4.2.0:
   resolved "https://registry.npmjs.org/loader-runner/-/loader-runner-4.3.0.tgz"
 
 loader-utils@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/loader-utils/-/loader-utils-2.0.2.tgz"
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.4.tgz#8b5cb38b5c34a9a018ee1fc0e6a066d1dfcc528c"
   dependencies:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
@@ -5775,7 +5678,7 @@ lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
 
 lowercase-keys@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-2.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-2.0.0.tgz#2603e78b7b4b0006cbca2fbcc8a3202558ac9479"
 
 lru-cache@^6.0.0:
   version "6.0.0"
@@ -5784,8 +5687,8 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 luxon@^1.26.0:
-  version "1.28.0"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.28.0.tgz#e7f96daad3938c06a62de0fb027115d251251fbf"
+  version "1.28.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.28.1.tgz#528cdf3624a54506d710290a2341aa8e6e6c61b0"
 
 magic-string@^0.25.0, magic-string@^0.25.7:
   version "0.25.9"
@@ -5822,10 +5725,6 @@ memfs@^3.1.2, memfs@^3.4.3:
   resolved "https://registry.npmjs.org/memfs/-/memfs-3.4.7.tgz"
   dependencies:
     fs-monkey "^1.0.3"
-
-memoize-one@^5.0.4:
-  version "5.2.1"
-  resolved "https://registry.npmjs.org/memoize-one/-/memoize-one-5.2.1.tgz"
 
 merge-descriptors@1.0.1:
   version "1.0.1"
@@ -5870,7 +5769,7 @@ mimic-fn@^2.1.0:
 
 mimic-response@^1.0.0, mimic-response@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
 
 mimic-response@^3.1.0:
   version "3.1.0"
@@ -5899,8 +5798,8 @@ minimatch@^5.0.1:
     brace-expansion "^2.0.1"
 
 minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.6:
-  version "1.2.6"
-  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz"
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
 
 mkdirp@~0.5.1:
   version "0.5.6"
@@ -5951,7 +5850,7 @@ namespace-emitter@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/namespace-emitter/-/namespace-emitter-2.0.1.tgz"
 
-nanoid@^3.1.25, nanoid@^3.3.4:
+nanoid@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
 
@@ -6033,7 +5932,7 @@ normalize-url@^4.1.0:
 
 normalize-url@^6.0.1:
   version "6.1.0"
-  resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
 
 npm-run-path@^4.0.1:
   version "4.0.1"
@@ -6148,7 +6047,7 @@ on-headers@~1.0.2:
 
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
-  resolved "https://registry.npmjs.org/once/-/once-1.4.0.tgz"
+  resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
     wrappy "1"
 
@@ -6813,10 +6712,6 @@ postcss@^8.3.5, postcss@^8.4.19, postcss@^8.4.4, postcss@^8.4.6, postcss@^8.4.7:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-preact@^10.5.13:
-  version "10.7.1"
-  resolved "https://registry.npmjs.org/preact/-/preact-10.7.1.tgz"
-
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
@@ -6913,7 +6808,7 @@ pstree.remy@^1.1.8:
 
 pump@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.npmjs.org/pump/-/pump-3.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
   dependencies:
     end-of-stream "^1.1.0"
     once "^1.3.1"
@@ -6960,7 +6855,7 @@ queue-microtask@^1.2.2:
 
 quick-lru@^5.1.1:
   version "5.1.1"
-  resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
 
 raf@^3.4.1:
   version "3.4.1"
@@ -8638,7 +8533,7 @@ wrap-ansi@^7.0.0:
 
 wrappy@1:
   version "1.0.2"
-  resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 write-file-atomic@^3.0.0:
   version "3.0.3"
