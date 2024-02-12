@@ -2035,18 +2035,19 @@
     validator "^13.0.0"
     ws "8.8.1"
 
-"@uppy/react@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@uppy/react/-/react-3.1.0.tgz#1dc8fa5e2b21b548c8e242c072956994a34439f6"
+"@uppy/react@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@uppy/react/-/react-3.2.1.tgz#1c8fb061c899d072ddafca98b12d62d7fa16cd1d"
   dependencies:
-    "@uppy/utils" "^5.1.2"
+    "@uppy/utils" "^5.6.0"
     prop-types "^15.6.1"
 
-"@uppy/utils@^5.0.2", "@uppy/utils@^5.1.2":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.1.2.tgz#136e4a2d3fc7222c6d19e0111fdd56bb2449be60"
+"@uppy/utils@^5.0.2", "@uppy/utils@^5.6.0":
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.7.0.tgz#763c0f0d88eb15f457278713d6d676c1b58109c9"
   dependencies:
-    lodash.throttle "^4.1.1"
+    lodash "^4.17.21"
+    preact "^10.5.13"
 
 "@uppy/xhr-upload@^3.0.2":
   version "3.0.2"
@@ -6801,6 +6802,10 @@ postcss@^8.3.5, postcss@^8.4.31, postcss@^8.4.4, postcss@^8.4.6, postcss@^8.4.7:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+preact@^10.5.13:
+  version "10.19.4"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.19.4.tgz#735d331d5b1bd2182cc36f2ba481fd6f0da3fe3b"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
